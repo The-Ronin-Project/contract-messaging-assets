@@ -1,4 +1,4 @@
-rootProject.name = "contract-messaging-document-data"
+rootProject.name = "contract-messaging-assets"
 
 pluginManagement {
     plugins {

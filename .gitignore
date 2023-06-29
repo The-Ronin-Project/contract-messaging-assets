@@ -1,6 +1,7 @@
 docs/
 build/
 v*/version
+.idea
 
 # Ignore Gradle project-specific cache directory
 .gradle

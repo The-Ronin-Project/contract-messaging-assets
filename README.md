@@ -1,4 +1,4 @@
-# contract project name here
+# Contract Messaging Assets
 
 This project holds an event / messaging contract.  See the `ronin-contract-event-tooling` repository for more information.
 
