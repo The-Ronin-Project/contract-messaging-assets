@@ -29,24 +29,26 @@ applicable examples.
 
 For example, for this layout, all examples are tested against the listed schema.
 
-    .
-    ????????? src/main/resources/schemas
-    ???   ????????? my-schema-v1.schema.json
-    ????????? src/test/resources/examples
-    ???   ????????? example1.json
-    ???   ????????? example2.json
+```
+    |- src/main/resources/schemas
+       |- my-schema-v1.schema.json
+    |- src/test/resources/examples
+       |- example1.json
+       |- example2.json
+```
 
 But in this example, `my-schema-example.json` is tested against `my-schema-v2.schema.json`, and `my-other-schema-example1.json` and `my-other-schema-example2.json` are tested
 against `my-other-schema-v2.schema.json`.
 
-    .
-    ????????? src/main/resources/schemas
-    ???   ????????? my-other-schema-v2.schema.json
-    ???   ????????? my-schema-v2.schema.json
-    ????????? src/test/resources/examples
-    ???   ????????? my-other-schema-example1.json
-    ???   ????????? my-other-schema-example2.json
-    ???   ????????? my-schema-example.json
+```
+    |- src/main/resources/schemas
+       |- my-other-schema-v2.schema.json
+       |- my-schema-v2.schema.json
+    |- src/test/resources/examples
+       |- my-other-schema-example1.json
+       |- my-other-schema-example2.json
+       |- my-schema-example.json
+```
 
 ### generateEventDocs
 
