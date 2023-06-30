@@ -10,9 +10,9 @@ on:
 jobs:
   build_and_test:
     name: build_and_test
-    uses: projectronin/github/.github/workflows/event_contract_cicd.yaml@master
+    uses: projectronin/github/.github/workflows/event_contract_cicd.yaml@feature/update-event-workflow-to-gradle
     with:
-      schema_name: ronin-contract-event-template
+      schema_name: contract-messaging-assets
       publish: ${{ github.ref == 'refs/heads/main' }}
     secrets:
       docker_username: ${{ secrets.NEXUS_DOCKER_USERNAME }}
