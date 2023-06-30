@@ -4,13 +4,15 @@ on:
   push:
     branches: 
       - main
+      - v*
+    tags:
+      - 'v*.*.*'
   pull_request:
-  workflow_dispatch:
 
 jobs:
   build_and_test:
     name: build_and_test
     uses: projectronin/github/.github/workflows/event_contract_cicd.yaml@feature/update-event-workflow-to-gradle
     secrets:
-      nexus_user:      ${{ secrets.NEXUS_RAW_USER }}
-      nexus_token:     ${{ secrets.NEXUS_RAW_TOKEN }}
+      nexus_user:      ${{ secrets.NEXUS_MAVEN_USER }}
+      nexus_token:     ${{ secrets.NEXUS_MAVEN_TOKEN }}
