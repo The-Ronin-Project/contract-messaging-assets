@@ -1,0 +1,49 @@
+{
+  "$id": "asset-command-v1",
+  "title": "Asset Commands",
+  "description": "Commands for managing Assets.",
+  "type": "object",
+  "properties": {
+    "create" : {
+      "description": "This represents a create event.",
+      "$ref": "#/$defs/asset"
+    }
+  },
+  "$defs":  {
+    "ResourceType": {
+      "type": "string",
+      "enum": [
+        "DiagnosticReport",
+        "DocumentReference",
+        "Patient"
+      ]
+    },
+    "asset": {
+      "type": "object",
+      "description": "A Patient Asset",
+      "properties": {
+        "patientId": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "resourceType": {
+          "$ref": "#/$defs/ResourceType"
+        },
+        "resourceId": {
+          "type": "string"
+        },
+        "resourceAttribute": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "patientId",
+        "url",
+        "resourceType",
+        "resourceAttribute"
+      ]
+    }
+  }
+}
