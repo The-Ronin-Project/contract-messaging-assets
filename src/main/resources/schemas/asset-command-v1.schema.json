@@ -22,9 +22,6 @@
       "type": "object",
       "description": "A Patient Asset",
       "properties": {
-        "tenantId": {
-          "type": "string"
-        },
         "patientId": {
           "type": "string"
         },
@@ -42,7 +39,6 @@
         }
       },
       "required": [
-        "tenantId",
         "patientId",
         "url",
         "resourceType",
