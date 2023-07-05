@@ -1,6 +1,5 @@
 {
   "create": {
-    "tenantId": "h387afy7",
     "patientId": "0c2a2485-460b-41ee-8790-e1724c045475",
     "url": "http://127.0.0.1/document.txt",
     "resourceType": "DiagnosticReport",

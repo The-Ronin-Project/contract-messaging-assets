@@ -2,7 +2,7 @@ rootProject.name = "contract-messaging-assets"
 
 pluginManagement {
     plugins {
-        id("com.projectronin.event.contract") version "2.0.0-SNAPSHOT"
+        id("com.projectronin.json.contract") version "2.0.0-feature-code-generation-SNAPSHOT"
     }
 
     repositories {
