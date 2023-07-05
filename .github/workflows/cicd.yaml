@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - v*
+      - version/v*
     tags:
       - 'v*.*.*'
   pull_request:
