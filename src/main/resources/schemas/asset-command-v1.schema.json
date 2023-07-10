@@ -3,48 +3,43 @@
   "title": "Asset Commands",
   "description": "Commands for managing Assets.",
   "type": "object",
-  "$ref": "#/$defs/AssetCommand",
-  "$defs":  {
+  "properties": {
+    "action": {
+      "type": "string"
+    },
+    "tenantId": {
+      "type": "string"
+    },
+    "patientId": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "resourceType": {
+      "$ref": "#/$defs/ResourceType"
+    },
+    "resourceId": {
+      "type": "string"
+    },
+    "resourceAttribute": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "tenantId",
+    "patientId",
+    "url",
+    "resourceType",
+    "resourceAttribute"
+  ],
+  "$defs": {
     "ResourceType": {
       "type": "string",
       "enum": [
         "DiagnosticReport",
         "DocumentReference",
         "Patient"
-      ]
-    },
-    "AssetCommand": {
-      "type": "object",
-      "description": "A Patient Asset to create",
-      "properties": {
-        "action": {
-          "type": "string"
-        },
-        "tenantId": {
-          "type": "string"
-        },
-        "patientId": {
-          "type": "string"
-        },
-        "url": {
-          "type": "string"
-        },
-        "resourceType": {
-          "$ref": "#/$defs/ResourceType"
-        },
-        "resourceId": {
-          "type": "string"
-        },
-        "resourceAttribute": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "tenantId",
-        "patientId",
-        "url",
-        "resourceType",
-        "resourceAttribute"
       ]
     }
   }
