@@ -3,11 +3,7 @@
   "title": "Asset Commands",
   "description": "Commands for managing Assets.",
   "type": "object",
-  "properties": {
-    "object": {
-      "$ref": "#/$defs/Asset"
-    }
-  },
+  "$ref": "#/$defs/AssetCommand",
   "$defs":  {
     "ResourceType": {
       "type": "string",
@@ -17,13 +13,12 @@
         "Patient"
       ]
     },
-    "Asset": {
+    "AssetCommand": {
       "type": "object",
-      "description": "A Patient Asset",
+      "description": "A Patient Asset to create",
       "properties": {
         "action": {
-          "type": "string",
-          "description": "The action of the command. CREATE, UPDATE, READ, DELETE"
+          "type": "string"
         },
         "tenantId": {
           "type": "string"
