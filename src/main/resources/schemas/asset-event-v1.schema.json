@@ -1,0 +1,12 @@
+{
+  "$id": "asset-event-v1",
+  "title": "Asset Events",
+  "description": "Asset events.",
+  "type": "object",
+  "properties": {
+    "create" : {
+      "description": "This represents a asset stored event.",
+      "$ref": "asset-command-v1.schema.json#/$defs/asset"
+    }
+  }
+}
