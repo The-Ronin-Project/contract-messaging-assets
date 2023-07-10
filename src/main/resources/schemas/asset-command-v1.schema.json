@@ -4,9 +4,53 @@
   "description": "Commands for managing Assets.",
   "type": "object",
   "properties": {
-    "create" : {
-      "description": "This represents a create event.",
-      "$ref": "asset.schema.json#/$defs/Asset"
+    "object": {
+      "$ref": "#/$defs/Asset"
+    }
+  },
+  "$defs":  {
+    "ResourceType": {
+      "type": "string",
+      "enum": [
+        "DiagnosticReport",
+        "DocumentReference",
+        "Patient"
+      ]
+    },
+    "Asset": {
+      "type": "object",
+      "description": "A Patient Asset",
+      "properties": {
+        "action": {
+          "type": "string",
+          "description": "The action of the command. CREATE, UPDATE, READ, DELETE"
+        },
+        "tenantId": {
+          "type": "string"
+        },
+        "patientId": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "resourceType": {
+          "$ref": "#/$defs/ResourceType"
+        },
+        "resourceId": {
+          "type": "string"
+        },
+        "resourceAttribute": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "tenantId",
+        "patientId",
+        "url",
+        "resourceType",
+        "resourceAttribute"
+      ]
     }
   }
 }
