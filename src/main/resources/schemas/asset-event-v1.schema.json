@@ -6,7 +6,7 @@
   "properties": {
     "create" : {
       "description": "This represents a asset stored event.",
-      "$ref": "asset-command-v1.schema.json#/$defs/asset"
+      "$ref": "asset.schema.json#/$defs/Asset"
     }
   }
 }
