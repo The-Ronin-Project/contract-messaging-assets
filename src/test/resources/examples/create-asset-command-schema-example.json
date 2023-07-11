@@ -4,6 +4,5 @@
   "url": "http://127.0.0.1/document.txt",
   "resourceType": "DiagnosticReport",
   "resourceId": "fb3fab2d-e5f3-433b-95be-39763989f020",
-  "resourceAttribute": "attribute",
-  "action": "CREATE"
+  "resourceAttribute": "attribute"
 }
