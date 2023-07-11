@@ -1,12 +1,9 @@
 {
-  "$id": "asset-command-v1",
-  "title": "Asset Commands",
-  "description": "Commands for managing Assets.",
+  "$id": "asset-create-command-v1",
+  "title": "Asset Create Command",
+  "description": "Command for creating an Assets.",
   "type": "object",
   "properties": {
-    "action": {
-      "type": "string"
-    },
     "tenantId": {
       "type": "string"
     },
