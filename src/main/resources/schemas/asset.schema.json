@@ -1,7 +1,7 @@
 {
-  "$id": "asset-event-v1",
-  "title": "Asset Events",
-  "description": "Asset events.",
+  "$id": "asset",
+  "title": "Asset",
+  "description": "A stored Asset",
   "type": "object",
   "properties": {
     "id": {
