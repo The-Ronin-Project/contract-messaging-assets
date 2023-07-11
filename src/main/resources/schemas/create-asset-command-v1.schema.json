@@ -1,0 +1,43 @@
+{
+  "$id": "create-asset-command-v1",
+  "title": "Create Asset Command",
+  "description": "Command for creating an Assets.",
+  "type": "object",
+  "properties": {
+    "tenantId": {
+      "type": "string"
+    },
+    "patientId": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string"
+    },
+    "resourceType": {
+      "$ref": "#/$defs/ResourceType"
+    },
+    "resourceId": {
+      "type": "string"
+    },
+    "resourceAttribute": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "tenantId",
+    "patientId",
+    "url",
+    "resourceType",
+    "resourceAttribute"
+  ],
+  "$defs": {
+    "ResourceType": {
+      "type": "string",
+      "enum": [
+        "DiagnosticReport",
+        "DocumentReference",
+        "Patient"
+      ]
+    }
+  }
+}

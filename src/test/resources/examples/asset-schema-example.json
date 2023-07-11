@@ -1,0 +1,11 @@
+{
+  "id": "3e36c417-d237-4c29-94ba-dc4220013605",
+  "tenantId": "tenant",
+  "patientId": "0c2a2485-460b-41ee-8790-e1724c045475",
+  "url": "http://127.0.0.1/document.txt",
+  "resourceType": "DiagnosticReport",
+  "resourceId": "fb3fab2d-e5f3-433b-95be-39763989f020",
+  "resourceAttribute": "attribute",
+  "createdAt": "2023-07-11 10:35:00Z",
+  "updatedAt": "2023-07-11 10:35:00Z"
+}
