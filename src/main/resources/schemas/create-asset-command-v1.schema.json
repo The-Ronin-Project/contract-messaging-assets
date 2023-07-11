@@ -1,6 +1,6 @@
 {
-  "$id": "asset-create-command-v1",
-  "title": "Asset Create Command",
+  "$id": "create-asset-command-v1",
+  "title": "Create Asset Command",
   "description": "Command for creating an Assets.",
   "type": "object",
   "properties": {
