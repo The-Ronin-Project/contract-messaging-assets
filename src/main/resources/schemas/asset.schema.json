@@ -16,6 +16,9 @@
     "url": {
       "type": "string"
     },
+    "hash": {
+      "type": "string"
+    },
     "resourceType": {
       "$ref": "#/$defs/ResourceType"
     },
@@ -37,6 +40,7 @@
     "tenantId",
     "patientId",
     "url",
+    "hash",
     "resourceType",
     "resourceAttribute",
     "createdAt",
