@@ -41,6 +41,7 @@
     "patientId",
     "url",
     "hash",
+    "resourceId",
     "resourceType",
     "resourceAttribute",
     "createdAt",
