@@ -4,43 +4,34 @@
   "description": "Command for creating Assets.",
   "type": "object",
   "properties": {
-    "assets": {
+    "tenantId": {
+      "type": "string"
+    },
+    "patientId": {
+      "type": "string"
+    },
+    "attachments": {
       "type": "array",
-      "minItems": 1,
       "items": {
-        "type": "object",
-        "properties": {
-          "tenantId": {
-            "type": "string"
-          },
-          "patientId": {
-            "type": "string"
-          },
-          "url": {
-            "type": "string"
-          },
-          "resourceType": {
-            "$ref": "asset.schema.json#/$defs/ResourceType"
-          },
-          "resourceId": {
-            "type": "string"
-          },
-          "resourceAttribute": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "tenantId",
-          "patientId",
-          "url",
-          "resourceId",
-          "resourceType",
-          "resourceAttribute"
-        ]
+        "$ref": "asset.schema.json#/$defs/Attachment"
       }
+    },
+    "resourceType": {
+      "$ref": "asset.schema.json#/$defs/ResourceType"
+    },
+    "resourceId": {
+      "type": "string"
+    },
+    "resourceAttribute": {
+      "type": "string"
     }
   },
   "required": [
-    "assets"
+    "tenantId",
+    "patientId",
+    "attachments",
+    "resourceId",
+    "resourceType",
+    "resourceAttribute"
   ]
 }
