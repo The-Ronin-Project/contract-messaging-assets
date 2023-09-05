@@ -1,7 +1,7 @@
 {
   "$id": "asset",
-  "title": "Asset",
-  "description": "A stored Asset",
+  "title": "Asset Stored Event",
+  "description": "A list of stored Assets",
   "type": "object",
   "properties": {
     "id": {
@@ -13,8 +13,11 @@
     "patientId": {
       "type": "string"
     },
-    "url": {
-      "type": "string"
+    "attachments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/Attachment"
+      }
     },
     "hash": {
       "type": "string"
@@ -39,8 +42,8 @@
     "id",
     "tenantId",
     "patientId",
-    "url",
-    "hash",
+    "attachments",
+    "resourceId",
     "resourceType",
     "resourceAttribute",
     "createdAt",
@@ -53,6 +56,24 @@
         "DiagnosticReport",
         "DocumentReference",
         "Patient"
+      ]
+    },
+    "Attachment": {
+      "type": "object",
+      "properties": {
+        "contentType": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "hash": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "contentType",
+        "url"
       ]
     }
   }

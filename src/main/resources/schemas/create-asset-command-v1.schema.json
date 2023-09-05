@@ -1,7 +1,7 @@
 {
   "$id": "create-asset-command-v1",
-  "title": "Create Asset Command",
-  "description": "Command for creating an Assets.",
+  "title": "Create Assets Command",
+  "description": "Command for creating Assets.",
   "type": "object",
   "properties": {
     "tenantId": {
@@ -10,11 +10,14 @@
     "patientId": {
       "type": "string"
     },
-    "url": {
-      "type": "string"
+    "attachments": {
+      "type": "array",
+      "items": {
+        "$ref": "asset.schema.json#/$defs/Attachment"
+      }
     },
     "resourceType": {
-      "$ref": "#/$defs/ResourceType"
+      "$ref": "asset.schema.json#/$defs/ResourceType"
     },
     "resourceId": {
       "type": "string"
@@ -26,18 +29,9 @@
   "required": [
     "tenantId",
     "patientId",
-    "url",
+    "attachments",
+    "resourceId",
     "resourceType",
     "resourceAttribute"
-  ],
-  "$defs": {
-    "ResourceType": {
-      "type": "string",
-      "enum": [
-        "DiagnosticReport",
-        "DocumentReference",
-        "Patient"
-      ]
-    }
-  }
+  ]
 }
