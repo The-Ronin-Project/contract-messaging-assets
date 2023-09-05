@@ -1,5 +1,5 @@
 {
-  "$id": "StoredAssets",
+  "$id": "stored-assets-v1",
   "title": "Asset Stored Event",
   "description": "A list of stored Assets",
   "type": "object",
