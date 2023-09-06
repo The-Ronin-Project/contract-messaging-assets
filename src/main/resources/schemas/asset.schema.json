@@ -1,22 +1,19 @@
 {
-  "$id": "asset",
+  "$id": "stored-assets-v1",
   "title": "Asset Stored Event",
   "description": "A list of stored Assets",
   "type": "object",
   "properties": {
-    "id": {
-      "type": "string"
-    },
     "tenantId": {
       "type": "string"
     },
     "patientId": {
       "type": "string"
     },
-    "attachments": {
+    "assets": {
       "type": "array",
       "items": {
-        "$ref": "#/$defs/Attachment"
+        "$ref": "#/$defs/Asset"
       }
     },
     "hash": {
@@ -30,24 +27,15 @@
     },
     "resourceAttribute": {
       "type": "string"
-    },
-    "createdAt": {
-      "type": "string"
-    },
-    "updatedAt": {
-      "type": "string"
     }
   },
   "required": [
-    "id",
     "tenantId",
     "patientId",
-    "attachments",
+    "assets",
     "resourceId",
     "resourceType",
-    "resourceAttribute",
-    "createdAt",
-    "updatedAt"
+    "resourceAttribute"
   ],
   "$defs": {
     "ResourceType": {
@@ -58,9 +46,12 @@
         "Patient"
       ]
     },
-    "Attachment": {
+    "Asset": {
       "type": "object",
       "properties": {
+        "id": {
+          "type": "string"
+        },
         "contentType": {
           "type": "string"
         },
@@ -69,11 +60,21 @@
         },
         "hash": {
           "type": "string"
+        },
+        "createdAt": {
+          "type": "string"
+        },
+        "updatedAt": {
+          "type": "string"
         }
       },
       "required": [
+        "id",
         "contentType",
-        "url"
+        "url",
+        "hash",
+        "createdAt",
+        "updatedAt"
       ]
     }
   }
