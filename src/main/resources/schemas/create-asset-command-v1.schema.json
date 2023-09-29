@@ -21,9 +21,6 @@
     },
     "resourceId": {
       "type": "string"
-    },
-    "resourceAttribute": {
-      "type": "string"
     }
   },
   "required": [
@@ -31,8 +28,7 @@
     "patientId",
     "attachments",
     "resourceId",
-    "resourceType",
-    "resourceAttribute"
+    "resourceType"
   ],
   "$defs": {
     "Attachment": {
