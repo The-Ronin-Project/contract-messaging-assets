@@ -18,26 +18,24 @@
     },
     "hash": {
       "type": "string"
-    },
-    "resourceType": {
-      "type": "string"
-    },
-    "resourceId": {
-      "type": "string"
     }
   },
   "required": [
     "tenantId",
     "patientId",
-    "assets",
-    "resourceId",
-    "resourceType"
+    "assets"
   ],
   "$defs": {
     "Asset": {
       "type": "object",
       "properties": {
         "id": {
+          "type": "string"
+        },
+        "resourceType": {
+          "type": "string"
+        },
+        "resourceId": {
           "type": "string"
         },
         "contentType": {
@@ -59,6 +57,8 @@
       "required": [
         "id",
         "contentType",
+        "resourceId",
+        "resourceType",
         "url",
         "hash",
         "createdAt",
