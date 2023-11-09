@@ -15,20 +15,12 @@
       "items": {
         "$ref": "#/$defs/Attachment"
       }
-    },
-    "resourceType": {
-      "type": "string"
-    },
-    "resourceId": {
-      "type": "string"
     }
   },
   "required": [
     "tenantId",
     "patientId",
-    "attachments",
-    "resourceId",
-    "resourceType"
+    "attachments"
   ],
   "$defs": {
     "Attachment": {
