@@ -7,8 +7,10 @@
     {
       "contentType": "text/plain",
       "url": "http://127.0.0.1/document.txt",
-      "resourceType": "Attachment",
-      "resourceId": "fb3fab2d-e5f3-433b-95be-39763989f020"
+      "resource": {
+        "resourceType": "Attachment",
+        "resourceId": "fb3fab2d-e5f3-433b-95be-39763989f020"
+      }
     },
     {
       "contentType": "application/pdf",

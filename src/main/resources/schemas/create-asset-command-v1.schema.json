@@ -31,6 +31,21 @@
     "attachments"
   ],
   "$defs": {
+    "Resource": {
+      "type": "object",
+      "properties": {
+        "resourceType": {
+          "type": "string"
+        },
+        "resourceId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "resourceType",
+        "resourceId"
+      ]
+    },
     "Attachment": {
       "type": "object",
       "properties": {
@@ -43,11 +58,8 @@
         "hash": {
           "type": "string"
         },
-        "resourceType": {
-          "type": "string"
-        },
-        "resourceId": {
-          "type": "string"
+        "resource": {
+          "$ref": "#/$defs/Resource"
         }
       },
       "required": [
