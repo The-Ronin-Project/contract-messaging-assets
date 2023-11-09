@@ -10,6 +10,12 @@
     "patientId": {
       "type": "string"
     },
+    "resourceType": {
+      "type": "string"
+    },
+    "resourceId": {
+      "type": "string"
+    },
     "assets": {
       "type": "array",
       "items": {
@@ -18,34 +24,23 @@
     },
     "hash": {
       "type": "string"
-    },
-    "resourceType": {
-      "$ref": "#/$defs/ResourceType"
-    },
-    "resourceId": {
-      "type": "string"
     }
   },
   "required": [
     "tenantId",
     "patientId",
-    "assets",
     "resourceId",
-    "resourceType"
+    "resourceType",
+    "assets"
   ],
   "$defs": {
-    "ResourceType": {
-      "type": "string",
-      "enum": [
-        "DiagnosticReport",
-        "DocumentReference",
-        "Patient"
-      ]
-    },
     "Asset": {
       "type": "object",
       "properties": {
         "id": {
+          "type": "string"
+        },
+        "resourceAttribute": {
           "type": "string"
         },
         "contentType": {
@@ -67,6 +62,7 @@
       "required": [
         "id",
         "contentType",
+        "resourceAttribute",
         "url",
         "hash",
         "createdAt",

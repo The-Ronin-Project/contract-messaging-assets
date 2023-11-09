@@ -10,25 +10,25 @@
     "patientId": {
       "type": "string"
     },
+    "resourceType": {
+      "type": "string"
+    },
+    "resourceId": {
+      "type": "string"
+    },
     "attachments": {
       "type": "array",
       "items": {
         "$ref": "#/$defs/Attachment"
       }
-    },
-    "resourceType": {
-      "$ref": "asset.schema.json#/$defs/ResourceType"
-    },
-    "resourceId": {
-      "type": "string"
     }
   },
   "required": [
     "tenantId",
     "patientId",
-    "attachments",
     "resourceId",
-    "resourceType"
+    "resourceType",
+    "attachments"
   ],
   "$defs": {
     "Attachment": {
@@ -42,11 +42,14 @@
         },
         "hash": {
           "type": "string"
+        },
+        "resourceAttribute": {
+          "type": "string"
         }
       },
       "required": [
-        "contentType",
-        "url"
+        "url",
+        "resourceAttribute"
       ]
     }
   }

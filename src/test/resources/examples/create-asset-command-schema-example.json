@@ -1,16 +1,18 @@
 {
   "tenantId": "tenant",
   "patientId": "0c2a2485-460b-41ee-8790-e1724c045475",
+  "resourceType": "DocumentReference",
+  "resourceId": "fb3fab2d-e5f3-433b-95be-39763989f018",
   "attachments": [
     {
       "contentType": "text/plain",
-      "url": "http://127.0.0.1/document.txt"
+      "url": "http://127.0.0.1/document.txt",
+      "resourceAttribute": "Attachments/fb3fab2d-e5f3-433b-95be-39763989f020"
     },
     {
       "contentType": "application/pdf",
-      "url": "http://127.0.0.1/document.pdf"
+      "url": "http://127.0.0.1/document.pdf",
+      "resourceAttribute": "Attachments/fb3fab2d-e5f3-433b-95be-39763989f021"
     }
-  ],
-  "resourceType": "DiagnosticReport",
-  "resourceId": "fb3fab2d-e5f3-433b-95be-39763989f020"
+  ]
 }
