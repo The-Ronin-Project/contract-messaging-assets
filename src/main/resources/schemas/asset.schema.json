@@ -40,10 +40,7 @@
         "id": {
           "type": "string"
         },
-        "resourceType": {
-          "type": "string"
-        },
-        "resourceId": {
+        "resourceAttribute": {
           "type": "string"
         },
         "contentType": {
@@ -65,8 +62,7 @@
       "required": [
         "id",
         "contentType",
-        "resourceId",
-        "resourceType",
+        "resourceAttribute",
         "url",
         "hash",
         "createdAt",
