@@ -10,6 +10,12 @@
     "patientId": {
       "type": "string"
     },
+    "resourceType": {
+      "type": "string"
+    },
+    "resourceId": {
+      "type": "string"
+    },
     "attachments": {
       "type": "array",
       "items": {
@@ -20,6 +26,8 @@
   "required": [
     "tenantId",
     "patientId",
+    "resourceId",
+    "resourceType",
     "attachments"
   ],
   "$defs": {
@@ -43,9 +51,7 @@
         }
       },
       "required": [
-        "url",
-        "resourceId",
-        "resourceType"
+        "url"
       ]
     }
   }
