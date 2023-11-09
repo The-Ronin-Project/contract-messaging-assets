@@ -20,7 +20,7 @@
       "type": "string"
     },
     "resourceType": {
-      "$ref": "#/$defs/ResourceType"
+      "type": "string"
     },
     "resourceId": {
       "type": "string"
@@ -34,14 +34,6 @@
     "resourceType"
   ],
   "$defs": {
-    "ResourceType": {
-      "type": "string",
-      "enum": [
-        "DiagnosticReport",
-        "DocumentReference",
-        "Patient"
-      ]
-    },
     "Asset": {
       "type": "object",
       "properties": {

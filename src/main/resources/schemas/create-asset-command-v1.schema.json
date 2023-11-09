@@ -17,7 +17,7 @@
       }
     },
     "resourceType": {
-      "$ref": "asset.schema.json#/$defs/ResourceType"
+      "type": "string"
     },
     "resourceId": {
       "type": "string"
@@ -42,10 +42,18 @@
         },
         "hash": {
           "type": "string"
+        },
+        "resourceType": {
+          "type": "string"
+        },
+        "resourceId": {
+          "type": "string"
         }
       },
       "required": [
-        "url"
+        "url",
+        "resourceId",
+        "resourceType"
       ]
     }
   }
