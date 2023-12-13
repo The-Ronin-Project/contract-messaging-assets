@@ -21,6 +21,12 @@
       "items": {
         "$ref": "#/$defs/Attachment"
       }
+    },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     }
   },
   "required": [
