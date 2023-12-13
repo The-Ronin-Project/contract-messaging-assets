@@ -22,6 +22,12 @@
         "$ref": "#/$defs/Asset"
       }
     },
+    "errors": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "hash": {
       "type": "string"
     }
